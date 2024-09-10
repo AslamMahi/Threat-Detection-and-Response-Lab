@@ -1,0 +1,29 @@
+version: '3.8'  # Specifies the version of the Docker Compose file format
+
+services:
+  cribl:
+    image: cribl/cribl:latest  # Cribl image from Docker Hub
+    container_name: cribl       # Name of the container
+    restart: unless-stopped     # Automatically restart the container unless it is manually stopped
+    environment:
+      - CRIBL_UID=1000          # User ID for the Cribl process
+      - CRIBL_GID=1000          # Group ID for the Cribl process
+    volumes:
+      - cribl_data:/opt/cribl/data   # Persistent data storage for Cribl
+      - cribl_local:/opt/cribl/local # Local configuration and settings
+    ports:
+      - "9000:9000"             # Port mapping for the Cribl web interface
+      - "10080:10080"           # Additional port (can be used for custom purposes)
+      - "9111:9111"             # Another port for data ingestion or other services
+    networks:
+      - cribl_network           # Attach the Cribl container to the specified network
+
+volumes:
+  cribl_data:
+    driver: local               # Use the default local driver for volume storage
+  cribl_local:
+    driver: local               # Use the default local driver for local configurations
+
+networks:
+  cribl_network:
+    driver: bridge              # Bridge network for container communication
