@@ -6,6 +6,44 @@
 
 Threat Detection & Response Lab (TDAR) offers a modular and scalable environment for security professionals to deploy, test, and analyze a variety of security tools and technologies. By leveraging modern infrastructure components like Docker, TDAR simplifies the deployment, management, and integration of cutting-edge security solutions.
 
+## Lab Diagram
+
+<p align="center">
+  <img src="Assets/labdaigram.png" alt="Lab Diagram" />
+</p>
+
+## Lab Infrastructure Diagram
+
+<p align="center">
+  <img src="Assets/flowchart1.png" alt="Lab Infrastructure Diagram" />
+</p>
+
+The diagram above illustrates the architecture of the TDAR environment, showcasing the key components:
+
+- **Sources**: These include tools like OSQuery, Elastic-EDR, Sysmon, Packetbeat, and Windows Native Logging, which feed data into the system.
+- **Monitoring and Aggregation**: Elastic-Agent (stand-alone) and Crible Stream handle the management and processing of data collected from the sources.
+- **Output Tools**: Data is then visualized and analyzed using tools such as Azure Data Explorer, Graphana (Cloud), Splunk (On-prem), and Elastic (On-prem).
+
+### Key Elements:
+1. **Sources**:
+   - OSQuery
+   - Elastic-EDR
+   - Sysmon
+   - Packetbeat
+   - Windows Native Logging
+
+2. **Monitoring & Data Ingestion**:
+   - Elastic-Agent (Stand-Alone)
+   - Crible Stream
+
+3. **Output & Analysis**:
+   - Azure Data Explorer
+   - Graphana (Cloud)
+   - Splunk (On-prem)
+   - Elastic (On-prem)
+
+Each component in the architecture has been carefully selected to ensure maximum coverage of threat detection and incident response capabilities.
+
 ## Capabilities
 
 - **Streamlined Deployment**: Docker and Docker Compose provide fast and efficient setup for all lab components.
