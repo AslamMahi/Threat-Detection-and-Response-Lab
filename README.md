@@ -11,7 +11,6 @@ Threat Detection & Response Lab (TDAR) offers a modular and scalable environment
 - **Streamlined Deployment**: Docker and Docker Compose provide fast and efficient setup for all lab components.
 - **Scalable & Flexible**: Easily customize the lab environment with a variety of security tools based on specific testing or research needs.
 - **Comprehensive Tool Integration**: Integrates leading security solutions such as Splunk, Elastic SIEM, Cribl, n8n SOAR, and Shuffle for diverse use cases.
-- **Automated Management**: Automation scripts ensure rapid deployment and ongoing management.
 - **Hands-on Security Testing**: Simulate real-world scenarios including threat detection, incident response, and threat hunting exercises.
 
 ## System Architecture
